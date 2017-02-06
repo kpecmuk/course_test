@@ -21,6 +21,10 @@ public class IsoscelesTriangle extends Triangle {
 
     @Override
     public boolean exists() {
-       return super.exists();
+        return super.exists() &&
+                (this.ab == this.bc) ||
+                (this.bc == this.ca) ||
+                (this.ca == this.ab);
+
     }
 }

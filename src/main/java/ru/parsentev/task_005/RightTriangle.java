@@ -1,24 +1,16 @@
 package ru.parsentev.task_005;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import ru.parsentev.task_002.Point;
 import ru.parsentev.task_003.Triangle;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import static java.lang.Math.abs;
 import static java.lang.Math.pow;
-import static java.lang.Math.sqrt;
 import static org.slf4j.LoggerFactory.getLogger;
 
-/**
- * TODO: comment
- *
- * @author parsentev
- * @since 28.07.2016
- */
+
 public class RightTriangle extends Triangle {
     private static final Logger log = getLogger(RightTriangle.class);
 
@@ -28,6 +20,18 @@ public class RightTriangle extends Triangle {
 
     @Override
     public boolean exists() {
-        return super.exists();
+        return (this.round(pow(ab, 2)) == this.round(pow(ca, 2) + pow(bc, 2))) ||
+                (this.round(pow(ca, 2)) == this.round(pow(ab, 2) + pow(bc, 2))) ||
+                (this.round(pow(bc, 2)) == this.round(pow(ab, 2) + pow(ca, 2)));
+    }
+
+    /**
+     * Округление до сотых
+     * чтобы тесты работали.
+     */
+    private double round(double value) {
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 }
