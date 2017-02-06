@@ -19,6 +19,12 @@ public class IsoscelesTriangle extends Triangle {
         super(first, second, third);
     }
 
+    /**
+     * Равнобедренный треугольник это где
+     * две стороны равны
+     *
+     * @return true если треугольник равнобедренный
+     */
     @Override
     public boolean exists() {
         return super.exists() &&

@@ -14,7 +14,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class Square {
     private static final Logger log = getLogger(Square.class);
 
-    private final double distance1, distance2, distance3, distance4;
+    protected double distance1, distance2, distance3, distance4;
 
     /**
      * Вычисляем расстояния между точками

@@ -18,6 +18,12 @@ public class RightTriangle extends Triangle {
         super(first, second, third);
     }
 
+    /**
+     * Используем свой метод округления, иначе тесты не проходят
+     * Проверка А в квадрате = Б в квадрате + С в квадрате
+     *
+     * @return true - прямоугольный треугольник
+     */
     @Override
     public boolean exists() {
         return (this.round(pow(ab, 2)) == this.round(pow(ca, 2) + pow(bc, 2))) ||
@@ -26,8 +32,7 @@ public class RightTriangle extends Triangle {
     }
 
     /**
-     * Округление до сотых
-     * чтобы тесты работали.
+     * Округление до сотых в большую сторону чтобы тесты работали.
      */
     private double round(double value) {
         BigDecimal bd = new BigDecimal(value);
