@@ -1,7 +1,7 @@
 package ru.parsentev.task_007;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import ru.parsentev.task_001.Calculator;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -21,6 +21,23 @@ public class Expression {
     }
 
     public double calc() {
-        throw new UnsupportedOperationException();
+        final String[] decodeMe = this.expr.split("\\\\+|-|/|\\\\*");
+        Calculator calculator = new Calculator();
+
+        if (decodeMe.length == 3) {
+            final String operation = decodeMe[1];
+            double first = Double.parseDouble(decodeMe[0]);
+            double second = Double.parseDouble(decodeMe[2]);
+            if (operation.equals("+")) {
+                calculator.add(first, second);
+            } else if (operation.equals("-")) {
+                calculator.substract(first, second);
+            } else if (operation.equals("*")) {
+                calculator.multiple(first, second);
+            } else if (operation.equals("/")) {
+                calculator.div(first, second);
+            } else throw new UnsupportedOperationException();
+        } else throw new IllegalStateException();
+        return calculator.getResult();
     }
 }
