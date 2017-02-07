@@ -1,14 +1,12 @@
 package ru.parsentev.task_008;
 
-import org.junit.Ignore;
 import org.junit.Test;
-import ru.parsentev.task_007.Expression;
 
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static org.junit.Assert.*;
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 /**
  * TODO: comment
@@ -16,12 +14,11 @@ import static org.hamcrest.core.Is.is;
  * @author parsentev
  * @since 28.07.2016
  */
-@Ignore
 public class PrimesTest {
     @Test
     public void calc() {
-        Primes primes = new Primes(3);
+        Primes primes = new Primes(60);
         List<Integer> result = primes.calc();
-        assertThat(result, is(asList(1, 2, 3)));
+        assertThat(result, is(asList(1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59)));
     }
 }
