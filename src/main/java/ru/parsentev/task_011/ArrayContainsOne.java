@@ -23,10 +23,16 @@ public class ArrayContainsOne {
         this.values = values;
     }
 
+    /**
+     * Тут всё настолько просто
+     * что даже комментировать нечего =)
+     *
+     * @return
+     */
     public boolean containsOnlyOne() {
         boolean result = true;
         for (int i = 0; i < this.values.length; i++) {
-            if (values[i] != 1) {
+            if (this.values[i] != 1) {
                 result = false;
                 break;
             }
