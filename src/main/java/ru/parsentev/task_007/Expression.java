@@ -16,10 +16,20 @@ public class Expression {
 
     private final String expr;
 
+    /**
+     * Создаем класс и сохраняем выражение
+     *
+     * @param expr выражение для вычисления
+     */
     public Expression(final String expr) {
         this.expr = expr;
     }
 
+    /**
+     * Разбираем выражение на 3 параметра и вычисляем
+     *
+     * @return результат вычисления
+     */
     public double calc() {
         final String[] decodeMe = this.expr.split("\\\\+|-|/|\\\\*");
         Calculator calculator = new Calculator();
