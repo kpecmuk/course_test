@@ -7,12 +7,6 @@ import java.util.List;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-/**
- * TODO: comment
- *
- * @author parsentev
- * @since 28.07.2016
- */
 public class Primes {
     private static final Logger log = getLogger(Primes.class);
 

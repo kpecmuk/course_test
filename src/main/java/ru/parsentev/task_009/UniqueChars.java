@@ -1,11 +1,5 @@
 package ru.parsentev.task_009;
 
-/**
- * TODO: comment
- *
- * @author parsentev
- * @since 28.07.2016
- */
 public class UniqueChars {
     private final String line;
     private int uniqueChars;

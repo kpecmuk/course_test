@@ -17,10 +17,21 @@ public class CashMachine {
 
     private final int[] values;
 
+    /**
+     * Конструктор сохраняет массив int [] для размена
+     *
+     * @param values разменные монеты
+     */
     public CashMachine(final int[] values) {
         this.values = values;
     }
 
+    /**
+     * Обмениваем деньги
+     *
+     * @param note Сумма для размена
+     * @return List of Lists с вариантами обмена
+     */
     public List<List<Integer>> exchange(int note) {
         throw new UnsupportedOperationException();
     }

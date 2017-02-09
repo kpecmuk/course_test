@@ -6,12 +6,6 @@ import ru.parsentev.task_003.Triangle;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-/**
- * TODO: comment
- *
- * @author parsentev
- * @since 28.07.2016
- */
 public class IsoscelesTriangle extends Triangle {
     private static final Logger log = getLogger(IsoscelesTriangle.class);
 

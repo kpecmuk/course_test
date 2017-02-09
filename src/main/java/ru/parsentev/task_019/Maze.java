@@ -1,7 +1,6 @@
 package ru.parsentev.task_019;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import ru.parsentev.task_002.Point;
 
 import java.util.List;

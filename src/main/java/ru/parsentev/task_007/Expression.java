@@ -5,12 +5,6 @@ import ru.parsentev.task_001.Calculator;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-/**
- * TODO: comment
- *
- * @author parsentev
- * @since 28.07.2016
- */
 public class Expression {
     private static final Logger log = getLogger(Expression.class);
 

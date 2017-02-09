@@ -10,7 +10,6 @@ import java.math.RoundingMode;
 import static java.lang.Math.pow;
 import static org.slf4j.LoggerFactory.getLogger;
 
-
 public class RightTriangle extends Triangle {
     private static final Logger log = getLogger(RightTriangle.class);
 

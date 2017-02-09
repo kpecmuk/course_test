@@ -4,10 +4,6 @@ import org.slf4j.Logger;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-/**
- * @author parsentev
- * @since 18.07.2016
- */
 public class Calculator {
     private static final Logger log = getLogger(Calculator.class);
     private double result;
